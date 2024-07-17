@@ -25,6 +25,8 @@ const (
 	DefaultSplitPrefix = "##"
 	// DefaultMaxWordChars is the default maximum word length for the WordPiece tokenizer.
 	DefaultMaxWordChars = 100
+
+	DefaultPadToken = "[PAD]"
 )
 
 var defaultNeverSplit = []string{
@@ -72,6 +74,7 @@ func (t *WordPieceTokenizer) Tokenize(text string) []tokenizers.StringOffsetsPai
 func (t *WordPieceTokenizer) WordPieceTokenize(tokens []tokenizers.StringOffsetsPair) []tokenizers.StringOffsetsPair {
 	outputTokens := make([]tokenizers.StringOffsetsPair, 0)
 
+
 	for _, stringOffsetsPair := range tokens {
 		token := stringOffsetsPair.String
 		initialOffsets := stringOffsetsPair.Offsets
@@ -99,9 +102,6 @@ func (t *WordPieceTokenizer) WordPieceTokenize(tokens []tokenizers.StringOffsets
 
 			for start < end {
 				subStr := string(characters[start:end])
-				if start > 0 {
-					subStr = t.splitPrefix + subStr
-				}
 
 				if _, exists := t.vocabulary.ID(subStr); exists {
 					found = true
@@ -111,6 +111,20 @@ func (t *WordPieceTokenizer) WordPieceTokenize(tokens []tokenizers.StringOffsets
 						End:   initialOffsets.Start + end,
 					}
 					break
+				}else {
+
+				    if start > 0 {
+				    	subStr = t.splitPrefix + subStr
+				        if _, exists := t.vocabulary.ID(subStr); exists {
+				        	found = true
+				        	curStrToken.String = subStr
+				        	curStrToken.Offsets = tokenizers.OffsetsType{
+				        		Start: initialOffsets.Start + start,
+				        		End:   initialOffsets.Start + end,
+				        	}
+				        	break
+				        }
+				    }
 				}
 				end--
 			}
@@ -134,6 +148,7 @@ func (t *WordPieceTokenizer) WordPieceTokenize(tokens []tokenizers.StringOffsets
 			outputTokens = append(outputTokens, subTokens...)
 		}
 	}
+
 	return outputTokens
 }
 

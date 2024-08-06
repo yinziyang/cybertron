@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/nlpodyssey/cybertron/pkg/tokenizers"
+	"github.com/yinziyang/cybertron/pkg/tokenizers"
 )
 
 func TestNewFromModelFolder(t *testing.T) {

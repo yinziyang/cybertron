@@ -5,8 +5,8 @@
 package bert
 
 import (
-	"github.com/nlpodyssey/cybertron/pkg/tokenizers/wordpiecetokenizer"
-	"github.com/nlpodyssey/cybertron/pkg/vocabulary"
+	"github.com/yinziyang/cybertron/pkg/tokenizers/wordpiecetokenizer"
+	"github.com/yinziyang/cybertron/pkg/vocabulary"
 	"github.com/nlpodyssey/spago/ag"
 	"github.com/nlpodyssey/spago/mat"
 	"github.com/nlpodyssey/spago/mat/float"

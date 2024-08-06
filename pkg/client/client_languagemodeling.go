@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"time"
 
-	languagemodelingv1 "github.com/nlpodyssey/cybertron/pkg/server/gen/proto/go/languagemodeling/v1"
-	"github.com/nlpodyssey/cybertron/pkg/tasks/languagemodeling"
+	languagemodelingv1 "github.com/yinziyang/cybertron/pkg/server/gen/proto/go/languagemodeling/v1"
+	"github.com/yinziyang/cybertron/pkg/tasks/languagemodeling"
 )
 
 var _ languagemodeling.Interface = &clientForLanguageModeling{}

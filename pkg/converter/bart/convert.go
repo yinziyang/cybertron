@@ -10,8 +10,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/nlpodyssey/cybertron/pkg/converter/pytorch"
-	"github.com/nlpodyssey/cybertron/pkg/models/bart"
+	"github.com/yinziyang/cybertron/pkg/converter/pytorch"
+	"github.com/yinziyang/cybertron/pkg/models/bart"
 	"github.com/nlpodyssey/spago/mat"
 	"github.com/nlpodyssey/spago/mat/float"
 	"github.com/nlpodyssey/spago/nn"

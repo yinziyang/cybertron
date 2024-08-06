@@ -4,7 +4,7 @@
 
 package bart
 
-import "github.com/nlpodyssey/cybertron/pkg/tokenizers/bpetokenizer"
+import "github.com/yinziyang/cybertron/pkg/tokenizers/bpetokenizer"
 
 type BPETokenizer struct {
 	*bpetokenizer.BPETokenizer

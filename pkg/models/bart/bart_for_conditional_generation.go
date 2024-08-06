@@ -8,7 +8,7 @@ import (
 	"encoding/gob"
 	"sync"
 
-	"github.com/nlpodyssey/cybertron/pkg/generationutils"
+	"github.com/yinziyang/cybertron/pkg/generationutils"
 	"github.com/nlpodyssey/spago/ag"
 	"github.com/nlpodyssey/spago/mat"
 	"github.com/nlpodyssey/spago/mat/float"

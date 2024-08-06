@@ -10,9 +10,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/nlpodyssey/cybertron/pkg/converter/pytorch"
-	"github.com/nlpodyssey/cybertron/pkg/models/bert"
-	"github.com/nlpodyssey/cybertron/pkg/vocabulary"
+	"github.com/yinziyang/cybertron/pkg/converter/pytorch"
+	"github.com/yinziyang/cybertron/pkg/models/bert"
+	"github.com/yinziyang/cybertron/pkg/vocabulary"
 	"github.com/nlpodyssey/spago/mat"
 	"github.com/nlpodyssey/spago/mat/float"
 	"github.com/nlpodyssey/spago/nn"

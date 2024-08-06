@@ -10,7 +10,7 @@ import (
 	"container/heap"
 	"sort"
 
-	"github.com/nlpodyssey/cybertron/pkg/utils/sliceutils"
+	"github.com/yinziyang/cybertron/pkg/utils/sliceutils"
 	"github.com/nlpodyssey/spago/mat"
 	"github.com/nlpodyssey/spago/mat/float"
 )

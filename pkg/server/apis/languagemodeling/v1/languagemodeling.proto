@@ -4,7 +4,7 @@ package languagemodeling.v1;
 
 import "google/api/annotations.proto";
 
-option go_package = "github.com/nlpodyssey/cybertron/pkg/server/apis/languagemodeling/v1;languagemodelingv1";
+option go_package = "github.com/yinziyang/cybertron/pkg/server/apis/languagemodeling/v1;languagemodelingv1";
 
 service LanguageModelingService {
   rpc Predict(LanguageModelingRequest) returns (LanguageModelingResponse) {

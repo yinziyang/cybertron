@@ -7,8 +7,8 @@ package bart
 import (
 	"fmt"
 
-	"github.com/nlpodyssey/cybertron/pkg/converter/pytorch"
-	"github.com/nlpodyssey/cybertron/pkg/models/bart"
+	"github.com/yinziyang/cybertron/pkg/converter/pytorch"
+	"github.com/yinziyang/cybertron/pkg/models/bart"
 	"github.com/nlpodyssey/spago/mat/float"
 )
 

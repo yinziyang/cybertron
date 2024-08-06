@@ -7,7 +7,7 @@ package bert
 import (
 	"fmt"
 
-	"github.com/nlpodyssey/cybertron/pkg/models/bert"
+	"github.com/yinziyang/cybertron/pkg/models/bert"
 	"github.com/nlpodyssey/spago/mat"
 	"github.com/nlpodyssey/spago/nn"
 	"github.com/nlpodyssey/spago/nn/linear"

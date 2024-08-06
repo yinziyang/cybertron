@@ -11,11 +11,11 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/nlpodyssey/cybertron/pkg/models/bert"
-	"github.com/nlpodyssey/cybertron/pkg/tasks/textencoding"
-	"github.com/nlpodyssey/cybertron/pkg/tokenizers"
-	"github.com/nlpodyssey/cybertron/pkg/tokenizers/wordpiecetokenizer"
-	"github.com/nlpodyssey/cybertron/pkg/vocabulary"
+	"github.com/yinziyang/cybertron/pkg/models/bert"
+	"github.com/yinziyang/cybertron/pkg/tasks/textencoding"
+	"github.com/yinziyang/cybertron/pkg/tokenizers"
+	"github.com/yinziyang/cybertron/pkg/tokenizers/wordpiecetokenizer"
+	"github.com/yinziyang/cybertron/pkg/vocabulary"
 	"github.com/nlpodyssey/spago/mat"
 	"github.com/nlpodyssey/spago/nn"
 )

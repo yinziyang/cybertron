@@ -7,9 +7,9 @@ package converter
 import (
 	"fmt"
 
-	"github.com/nlpodyssey/cybertron/pkg/converter/bart"
-	"github.com/nlpodyssey/cybertron/pkg/converter/bert"
-	"github.com/nlpodyssey/cybertron/pkg/models"
+	"github.com/yinziyang/cybertron/pkg/converter/bart"
+	"github.com/yinziyang/cybertron/pkg/converter/bert"
+	"github.com/yinziyang/cybertron/pkg/models"
 	"github.com/nlpodyssey/spago/mat/float"
 )
 

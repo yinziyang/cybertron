@@ -7,21 +7,24 @@ package bert
 import (
 	"context"
 	"fmt"
-	"github.com/nlpodyssey/spago/mat"
 	"path"
 	"path/filepath"
 	"sort"
 	"strconv"
 	"strings"
 
-	"github.com/nlpodyssey/cybertron/pkg/models/bert"
-	"github.com/nlpodyssey/cybertron/pkg/tasks/textclassification"
-	"github.com/nlpodyssey/cybertron/pkg/tokenizers"
-	"github.com/nlpodyssey/cybertron/pkg/tokenizers/wordpiecetokenizer"
-	"github.com/nlpodyssey/cybertron/pkg/utils/sliceutils"
-	"github.com/nlpodyssey/cybertron/pkg/vocabulary"
+	origlog "log"
+
+	"github.com/nlpodyssey/spago/mat"
+
 	"github.com/nlpodyssey/spago/nn"
 	"github.com/rs/zerolog/log"
+	"github.com/yinziyang/cybertron/pkg/models/bert"
+	"github.com/yinziyang/cybertron/pkg/tasks/textclassification"
+	"github.com/yinziyang/cybertron/pkg/tokenizers"
+	"github.com/yinziyang/cybertron/pkg/tokenizers/wordpiecetokenizer"
+	"github.com/yinziyang/cybertron/pkg/utils/sliceutils"
+	"github.com/yinziyang/cybertron/pkg/vocabulary"
 )
 
 // TextClassification is a text classification model.
@@ -85,12 +88,17 @@ func ID2Label(value map[string]string) []string {
 
 // Classify returns the classification of the given text.
 func (m *TextClassification) Classify(_ context.Context, text string) (textclassification.Response, error) {
+	origlog.Println("tokenize start")
 	tokenized := m.tokenize(text)
 	if l, k := len(tokenized), m.Model.Bert.Config.MaxPositionEmbeddings; l > k {
 		return textclassification.Response{}, fmt.Errorf("%w: %d > %d", textclassification.ErrInputSequenceTooLong, l, k)
 	}
+	origlog.Println("tokenize end")
+
+	origlog.Println("classify start")
 	logits := m.Model.Classify(tokenized)
 	probs := logits.Value().(mat.Matrix).Softmax()
+	origlog.Println("classify end")
 
 	result := sliceutils.NewIndexedSlice[float64](probs.Data().F64())
 	sort.Stable(sort.Reverse(result))

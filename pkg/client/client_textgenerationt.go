@@ -9,9 +9,9 @@ import (
 	"fmt"
 	"time"
 
-	textgenerationv1 "github.com/nlpodyssey/cybertron/pkg/server/gen/proto/go/textgeneration/v1"
-	"github.com/nlpodyssey/cybertron/pkg/tasks/textgeneration"
-	"github.com/nlpodyssey/cybertron/pkg/utils/nullable"
+	textgenerationv1 "github.com/yinziyang/cybertron/pkg/server/gen/proto/go/textgeneration/v1"
+	"github.com/yinziyang/cybertron/pkg/tasks/textgeneration"
+	"github.com/yinziyang/cybertron/pkg/utils/nullable"
 )
 
 var _ textgeneration.Interface = &clientForTextGeneration{}

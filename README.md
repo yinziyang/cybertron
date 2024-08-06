@@ -33,7 +33,7 @@ Requirements:
 Clone this repo or get the library:
 
 ```console
-go get -u github.com/nlpodyssey/cybertron
+go get -u github.com/yinziyang/cybertron
 ```
 
 Cybertron supports two main use cases, which are explained more in detail in the following.

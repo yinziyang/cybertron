@@ -4,7 +4,7 @@ package tokenclassification.v1;
 
 import "google/api/annotations.proto";
 
-option go_package = "github.com/nlpodyssey/cybertron/pkg/server/apis/tokenclassification/v1;tokenclassificationv1";
+option go_package = "github.com/yinziyang/cybertron/pkg/server/apis/tokenclassification/v1;tokenclassificationv1";
 
 service TokenClassificationService {
   rpc Classify(ClassifyRequest) returns (ClassifyResponse) {

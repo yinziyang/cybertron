@@ -8,8 +8,8 @@ import (
 	"context"
 
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
-	zeroshotv1 "github.com/nlpodyssey/cybertron/pkg/server/gen/proto/go/zeroshot/v1"
-	"github.com/nlpodyssey/cybertron/pkg/tasks/zeroshotclassifier"
+	zeroshotv1 "github.com/yinziyang/cybertron/pkg/server/gen/proto/go/zeroshot/v1"
+	"github.com/yinziyang/cybertron/pkg/tasks/zeroshotclassifier"
 	"google.golang.org/grpc"
 )
 

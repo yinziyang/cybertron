@@ -7,9 +7,9 @@ package wordpiecetokenizer
 import (
 	"strings"
 
-	"github.com/nlpodyssey/cybertron/pkg/tokenizers"
-	"github.com/nlpodyssey/cybertron/pkg/tokenizers/basetokenizer"
-	"github.com/nlpodyssey/cybertron/pkg/vocabulary"
+	"github.com/yinziyang/cybertron/pkg/tokenizers"
+	"github.com/yinziyang/cybertron/pkg/tokenizers/basetokenizer"
+	"github.com/yinziyang/cybertron/pkg/vocabulary"
 )
 
 const (
@@ -74,7 +74,6 @@ func (t *WordPieceTokenizer) Tokenize(text string) []tokenizers.StringOffsetsPai
 func (t *WordPieceTokenizer) WordPieceTokenize(tokens []tokenizers.StringOffsetsPair) []tokenizers.StringOffsetsPair {
 	outputTokens := make([]tokenizers.StringOffsetsPair, 0)
 
-
 	for _, stringOffsetsPair := range tokens {
 		token := stringOffsetsPair.String
 		initialOffsets := stringOffsetsPair.Offsets
@@ -111,20 +110,20 @@ func (t *WordPieceTokenizer) WordPieceTokenize(tokens []tokenizers.StringOffsets
 						End:   initialOffsets.Start + end,
 					}
 					break
-				}else {
+				} else {
 
-				    if start > 0 {
-				    	subStr = t.splitPrefix + subStr
-				        if _, exists := t.vocabulary.ID(subStr); exists {
-				        	found = true
-				        	curStrToken.String = subStr
-				        	curStrToken.Offsets = tokenizers.OffsetsType{
-				        		Start: initialOffsets.Start + start,
-				        		End:   initialOffsets.Start + end,
-				        	}
-				        	break
-				        }
-				    }
+					if start > 0 {
+						subStr = t.splitPrefix + subStr
+						if _, exists := t.vocabulary.ID(subStr); exists {
+							found = true
+							curStrToken.String = subStr
+							curStrToken.Offsets = tokenizers.OffsetsType{
+								Start: initialOffsets.Start + start,
+								End:   initialOffsets.Start + end,
+							}
+							break
+						}
+					}
 				}
 				end--
 			}

@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"time"
 
-	zeroshottextclassificationv1 "github.com/nlpodyssey/cybertron/pkg/server/gen/proto/go/zeroshot/v1"
-	"github.com/nlpodyssey/cybertron/pkg/tasks/zeroshotclassifier"
+	zeroshottextclassificationv1 "github.com/yinziyang/cybertron/pkg/server/gen/proto/go/zeroshot/v1"
+	"github.com/yinziyang/cybertron/pkg/tasks/zeroshotclassifier"
 )
 
 var _ zeroshotclassifier.Interface = &clientForZeroShotClassification{}

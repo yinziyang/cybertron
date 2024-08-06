@@ -4,7 +4,7 @@ package textencoding.v1;
 
 import "google/api/annotations.proto";
 
-option go_package = "github.com/nlpodyssey/cybertron/pkg/server/apis/textencoding/v1;textencodingv1";
+option go_package = "github.com/yinziyang/cybertron/pkg/server/apis/textencoding/v1;textencodingv1";
 
 service TextEncodingService {
   rpc Encode(EncodingRequest) returns (EncodingResponse) {

@@ -7,8 +7,8 @@ package bert
 import (
 	"fmt"
 
-	"github.com/nlpodyssey/cybertron/pkg/converter/pytorch"
-	"github.com/nlpodyssey/cybertron/pkg/models/bert"
+	"github.com/yinziyang/cybertron/pkg/converter/pytorch"
+	"github.com/yinziyang/cybertron/pkg/models/bert"
 	"github.com/nlpodyssey/spago/mat/float"
 )
 

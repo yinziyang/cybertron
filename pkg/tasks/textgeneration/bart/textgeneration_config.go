@@ -5,8 +5,8 @@
 package bart
 
 import (
-	"github.com/nlpodyssey/cybertron/pkg/generationutils"
-	"github.com/nlpodyssey/cybertron/pkg/models/bart"
+	"github.com/yinziyang/cybertron/pkg/generationutils"
+	"github.com/yinziyang/cybertron/pkg/models/bart"
 )
 
 // decoderConfig converts the Bart model Config to a generationutils.Config.

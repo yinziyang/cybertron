@@ -6,6 +6,7 @@ package bert
 
 import (
 	"encoding/gob"
+	"log"
 
 	"github.com/nlpodyssey/spago/mat"
 	"github.com/nlpodyssey/spago/mat/float"
@@ -38,5 +39,18 @@ func NewModelForSequenceClassification[T float.DType](bert *Model) *ModelForSequ
 
 // Classify returns the logits for the sequence classification.
 func (m *ModelForSequenceClassification) Classify(tokens []string) mat.Tensor {
-	return m.Classifier.Forward(m.Bert.Pooler.Forward(m.Bert.EncodeTokens(tokens)[0]))[0]
+	log.Println("encode tokens start")
+	encodeTokens := m.Bert.EncodeTokens(tokens)[0]
+	log.Println("encode tokens end")
+
+	log.Println("pooler start")
+	pooler := m.Bert.Pooler.Forward(encodeTokens)
+	log.Println("pooler end")
+
+	log.Println("forward start")
+	forward := m.Classifier.Forward(pooler)
+	log.Println("forward end")
+
+	return forward[0]
+	// return m.Classifier.Forward(m.Bert.Pooler.Forward(m.Bert.EncodeTokens(tokens)[0]))[0]
 }

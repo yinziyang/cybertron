@@ -9,7 +9,7 @@ import (
 	"encoding/gob"
 	"testing"
 
-	"github.com/nlpodyssey/cybertron/pkg/vocabulary"
+	"github.com/yinziyang/cybertron/pkg/vocabulary"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

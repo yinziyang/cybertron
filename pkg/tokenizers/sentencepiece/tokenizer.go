@@ -11,7 +11,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/nlpodyssey/cybertron/pkg/tokenizers/sentencepiece/internal/sentencepiece"
+	"github.com/yinziyang/cybertron/pkg/tokenizers/sentencepiece/internal/sentencepiece"
 	"github.com/nlpodyssey/gotokenizers/vocabulary"
 )
 

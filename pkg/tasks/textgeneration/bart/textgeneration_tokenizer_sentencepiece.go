@@ -4,7 +4,7 @@
 
 package bart
 
-import "github.com/nlpodyssey/cybertron/pkg/tokenizers/sentencepiece"
+import "github.com/yinziyang/cybertron/pkg/tokenizers/sentencepiece"
 
 type SentencePieceTokenizer struct {
 	*sentencepiece.Tokenizer

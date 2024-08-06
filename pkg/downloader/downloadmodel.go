@@ -11,7 +11,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/nlpodyssey/cybertron/pkg/models"
+	"github.com/yinziyang/cybertron/pkg/models"
 	"github.com/rs/zerolog/log"
 )
 

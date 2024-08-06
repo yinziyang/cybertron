@@ -8,8 +8,8 @@ import (
 	"context"
 
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
-	textencodingv1 "github.com/nlpodyssey/cybertron/pkg/server/gen/proto/go/textencoding/v1"
-	"github.com/nlpodyssey/cybertron/pkg/tasks/textencoding"
+	textencodingv1 "github.com/yinziyang/cybertron/pkg/server/gen/proto/go/textencoding/v1"
+	"github.com/yinziyang/cybertron/pkg/tasks/textencoding"
 	"google.golang.org/grpc"
 )
 

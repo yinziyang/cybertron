@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/nlpodyssey/cybertron/pkg/tokenizers"
+	"github.com/yinziyang/cybertron/pkg/tokenizers"
 	"github.com/nlpodyssey/gotokenizers/encodings"
 	"github.com/nlpodyssey/gotokenizers/models"
 	"github.com/nlpodyssey/gotokenizers/models/bpemodel"

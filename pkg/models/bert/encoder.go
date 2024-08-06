@@ -6,6 +6,7 @@ package bert
 
 import (
 	"encoding/gob"
+	"log"
 
 	"github.com/nlpodyssey/spago/mat"
 	"github.com/nlpodyssey/spago/mat/float"
@@ -39,5 +40,9 @@ func NewEncoder[T float.DType](c Config) *Encoder {
 
 // Encode performs the Bert encoding.
 func (e *Encoder) Encode(xs []mat.Tensor) []mat.Tensor {
-	return e.Layers.Forward(xs...)
+	log.Println("encode forward start")
+	result := e.Layers.Forward(xs...)
+	log.Println("encode forward end")
+
+	return result
 }

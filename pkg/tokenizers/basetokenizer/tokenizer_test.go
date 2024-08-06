@@ -7,7 +7,7 @@ package basetokenizer
 import (
 	"testing"
 
-	"github.com/nlpodyssey/cybertron/pkg/tokenizers"
+	"github.com/yinziyang/cybertron/pkg/tokenizers"
 )
 
 func TestBaseTokenizer_Tokenize(t *testing.T) {

@@ -11,7 +11,7 @@ package basetokenizer
 import (
 	"unicode"
 
-	"github.com/nlpodyssey/cybertron/pkg/tokenizers"
+	"github.com/yinziyang/cybertron/pkg/tokenizers"
 )
 
 // Ascii punctuation characters range

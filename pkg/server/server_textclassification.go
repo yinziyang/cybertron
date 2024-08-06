@@ -8,8 +8,8 @@ import (
 	"context"
 
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
-	textclassificationv1 "github.com/nlpodyssey/cybertron/pkg/server/gen/proto/go/textclassification/v1"
-	"github.com/nlpodyssey/cybertron/pkg/tasks/textclassification"
+	textclassificationv1 "github.com/yinziyang/cybertron/pkg/server/gen/proto/go/textclassification/v1"
+	"github.com/yinziyang/cybertron/pkg/tasks/textclassification"
 	"google.golang.org/grpc"
 )
 

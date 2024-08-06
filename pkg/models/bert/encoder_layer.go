@@ -6,6 +6,7 @@ package bert
 
 import (
 	"encoding/gob"
+	"log"
 
 	"github.com/nlpodyssey/spago/mat"
 	"github.com/nlpodyssey/spago/mat/float"
@@ -45,5 +46,16 @@ func NewEncoderLayer[T float.DType](c Config) *EncoderLayer {
 
 // Forward performs the forward step for each input node and returns the result.
 func (m *EncoderLayer) Forward(xs ...mat.Tensor) []mat.Tensor {
-	return m.FF.Forward(m.SelfAttention.Forward(xs))
+	log.Println("encoder layer forward start")
+
+	log.Println("self attention forward start")
+	selfAttentionForward := m.SelfAttention.Forward(xs)
+	log.Println("self attention forward end")
+
+	log.Println("ffforward start")
+	ffForward := m.FF.Forward(selfAttentionForward)
+	log.Println("ffforward end")
+
+	log.Println("encoder layer forward end")
+	return ffForward
 }

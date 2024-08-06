@@ -7,7 +7,7 @@ package bert
 import (
 	"encoding/gob"
 
-	"github.com/nlpodyssey/cybertron/pkg/tokenizers/wordpiecetokenizer"
+	"github.com/yinziyang/cybertron/pkg/tokenizers/wordpiecetokenizer"
 	"github.com/nlpodyssey/spago/mat"
 	"github.com/nlpodyssey/spago/mat/float"
 	"github.com/nlpodyssey/spago/nn"

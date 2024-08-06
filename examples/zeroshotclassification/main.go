@@ -12,9 +12,9 @@ import (
 	"time"
 
 	//lint:ignore ST1001 allow dot import just to make the example more readable
-	. "github.com/nlpodyssey/cybertron/examples"
-	"github.com/nlpodyssey/cybertron/pkg/tasks"
-	"github.com/nlpodyssey/cybertron/pkg/tasks/zeroshotclassifier"
+	. "github.com/yinziyang/cybertron/examples"
+	"github.com/yinziyang/cybertron/pkg/tasks"
+	"github.com/yinziyang/cybertron/pkg/tasks/zeroshotclassifier"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 )

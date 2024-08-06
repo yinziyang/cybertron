@@ -8,8 +8,8 @@ import (
 	"context"
 
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
-	langaugemodelingnv1 "github.com/nlpodyssey/cybertron/pkg/server/gen/proto/go/languagemodeling/v1"
-	"github.com/nlpodyssey/cybertron/pkg/tasks/languagemodeling"
+	langaugemodelingnv1 "github.com/yinziyang/cybertron/pkg/server/gen/proto/go/languagemodeling/v1"
+	"github.com/yinziyang/cybertron/pkg/tasks/languagemodeling"
 	"google.golang.org/grpc"
 )
 

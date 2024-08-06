@@ -10,8 +10,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/nlpodyssey/cybertron/pkg/server"
-	"github.com/nlpodyssey/cybertron/pkg/tasks"
+	"github.com/yinziyang/cybertron/pkg/server"
+	"github.com/yinziyang/cybertron/pkg/tasks"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 )
